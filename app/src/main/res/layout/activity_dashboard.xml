@@ -1,13 +1,286 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_dashboard"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
     tools:context="rms.monsterbank.DashboardActivity">
 
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:gravity="center">
+
+                    <Button
+                        android:text="Sign Out"
+                        android:layout_width="wrap_content"
+                        android:layout_height="31dp"
+                        android:id="@+id/backButton"
+                        android:textColor="#FA7508"
+                        android:background="@drawable/corner"
+                        android:paddingLeft="15dp" />
+
+                    <FrameLayout
+                        android:layout_width="56dp"
+                        android:layout_height="32dp"
+                        android:layout_weight="1.09">
+
+                    </FrameLayout>
+
+                    <Button
+                        android:text="Contact"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/helpButton"
+                        android:layout_height="31dp"
+                        android:background="@drawable/corner"
+                        android:textColor="#FA7508"
+                        android:paddingRight="15dp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="174dp"
+                    android:layout_height="75dp"
+                    android:id="@+id/imageView"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="15dp"
+                    android:background="@mipmap/mosnterlogo" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/orangeblock"
+                        android:alpha="0.8"
+                        android:id="@+id/accountBar"
+                        android:layout_marginBottom="15dp">
+
+                        <TextView
+                            android:text="Account No:"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="19dp"
+                            android:id="@+id/textView8"
+                            android:textSize="24sp"
+                            android:textColor="@android:color/background_light"
+                            android:layout_alignBaseline="@+id/textView9"
+                            android:layout_alignBottom="@+id/textView9"
+                            android:layout_alignParentStart="true" />
+
+                        <TextView
+                            android:text="16442932"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView9"
+                            android:layout_marginStart="58dp"
+                            android:textSize="24sp"
+                            android:textColor="@android:color/background_light"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/textView8" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/briefBalance"
+                        android:layout_marginBottom="15dp">
+
+                        <TextView
+                            android:text="£"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView4"
+                            android:layout_marginStart="77dp"
+                            android:textSize="20sp"
+                            android:layout_alignBaseline="@+id/textView10"
+                            android:layout_alignBottom="@+id/textView10"
+                            android:layout_toEndOf="@+id/textView10"
+                            android:textColor="@android:color/holo_orange_dark" />
+
+                        <TextView
+                            android:text="Balance:"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView10"
+                            android:layout_marginStart="22dp"
+                            android:textSize="20sp"
+                            android:textColor="@android:color/holo_orange_dark"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true" />
+
+                        <TextView
+                            android:text="2680.55"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView11"
+                            android:textSize="20sp"
+                            android:layout_marginStart="27dp"
+                            android:textColor="@android:color/holo_orange_dark"
+                            android:layout_alignBaseline="@+id/textView4"
+                            android:layout_alignBottom="@+id/textView4"
+                            android:layout_toEndOf="@+id/textView4" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/orangeblock"
+                        android:alpha="0.8"
+                        android:id="@+id/detailsBar"
+                        android:layout_marginBottom="15dp"
+                        android:onClick="startDetailsActivity">
+
+                        <TextView
+                            android:text="Account Details:"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="22dp"
+                            android:id="@+id/detailsTitle"
+                            android:textSize="24sp"
+                            android:textColor="@android:color/background_light"
+                            android:layout_alignBaseline="@+id/transferMenu"
+                            android:layout_alignBottom="@+id/transferMenu"
+                            android:layout_alignParentStart="true" />
+
+                        <TextView
+                            android:text="..."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/transferMenu"
+                            android:textSize="24sp"
+                            android:textColor="@android:color/background_light"
+                            android:layout_marginEnd="13dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/orangeblock"
+                        android:alpha="0.8"
+                        android:id="@+id/montleyInvoiceBar"
+                        android:layout_marginBottom="15dp">
+
+                        <TextView
+                            android:text="Transfer and Payments"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:id="@+id/montlyTitle"
+                            android:textSize="24sp"
+                            android:textColor="@android:color/background_light"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true" />
+
+                        <TextView
+                            android:text="..."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/montlyMenu"
+                            android:textSize="24sp"
+                            android:textColor="@android:color/background_light"
+                            android:layout_marginEnd="13dp"
+                            android:layout_alignBaseline="@+id/montlyTitle"
+                            android:layout_alignBottom="@+id/montlyTitle"
+                            android:layout_alignParentEnd="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/orangeblock"
+                        android:alpha="0.8"
+                        android:id="@+id/contactBar"
+                        android:layout_marginBottom="15dp">
+
+                        <TextView
+                            android:text="Montly Invoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:id="@+id/contact"
+                            android:textSize="24sp"
+                            android:textColor="@android:color/background_light"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true" />
+
+                        <TextView
+                            android:text="..."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/contactMenu"
+                            android:textSize="24sp"
+                            android:textColor="@android:color/background_light"
+                            android:layout_marginEnd="13dp"
+                            android:layout_alignBaseline="@+id/montlyTitle"
+                            android:layout_alignBottom="@+id/montlyTitle"
+                            android:layout_alignParentEnd="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/orangeblock"
+                        android:alpha="0.8"
+                        android:id="@+id/branmchFinderBar"
+                        android:layout_marginBottom="15dp">
+
+                        <TextView
+                            android:text="Find nearest Branch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:id="@+id/finder"
+                            android:textSize="24sp"
+                            android:textColor="@android:color/background_light"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true" />
+
+                        <TextView
+                            android:text="..."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/finderMenu"
+                            android:textSize="24sp"
+                            android:textColor="@android:color/background_light"
+                            android:layout_marginEnd="13dp"
+                            android:layout_alignBaseline="@+id/finder"
+                            android:layout_alignBottom="@+id/finder"
+                            android:layout_alignParentEnd="true" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

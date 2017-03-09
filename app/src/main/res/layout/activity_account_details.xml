@@ -4,10 +4,163 @@
     android:id="@+id/activity_account_details"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="rms.monsterbank.AccountDetails">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:gravity="center">
+
+                    <Button
+                        android:text="Sign Out"
+                        android:layout_width="wrap_content"
+                        android:layout_height="31dp"
+                        android:id="@+id/backButton"
+                        android:textColor="#FA7508"
+                        android:background="@drawable/corner"
+                        android:paddingLeft="15dp" />
+
+                    <FrameLayout
+                        android:layout_width="56dp"
+                        android:layout_height="32dp"
+                        android:layout_weight="1.09">
+
+                    </FrameLayout>
+
+                    <Button
+                        android:text="Contact"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/helpButton"
+                        android:layout_height="31dp"
+                        android:background="@drawable/corner"
+                        android:textColor="#FA7508"
+                        android:paddingRight="15dp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="174dp"
+                    android:layout_height="75dp"
+                    android:id="@+id/imageView"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="15dp"
+                    android:background="@mipmap/mosnterlogo" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/orangeblock"
+                        android:alpha="0.8"
+                        android:id="@+id/accountBar"
+                        android:layout_marginBottom="3dp">
+
+                        <TextView
+                            android:text="Account No:"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="19dp"
+                            android:id="@+id/textView8"
+                            android:textSize="24sp"
+                            android:textColor="@android:color/background_light"
+                            android:layout_alignBaseline="@+id/textView9"
+                            android:layout_alignBottom="@+id/textView9"
+                            android:layout_alignParentStart="true" />
+
+                        <TextView
+                            android:text="16442932"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView9"
+                            android:layout_marginStart="58dp"
+                            android:textSize="24sp"
+                            android:textColor="@android:color/background_light"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/textView8" />
+
+                    </RelativeLayout>
+
+                    <TabHost
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TabWidget
+                                android:id="@android:id/tabs"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <FrameLayout
+                                android:id="@android:id/tabcontent"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:id="@+id/tab1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:text="TextView"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/textView" />
+
+                                    <Button
+                                        android:text="Button"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/button2" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/tab2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:text="RadioButton"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/radioButton" />
+                                </LinearLayout>
+
+                            </FrameLayout>
+                        </LinearLayout>
+                    </TabHost>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
