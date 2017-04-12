@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity_account_details"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/background"
+tools:context="rms.monsterbank.AccountDetails">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="513dp"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <Button
+                        android:id="@+id/backButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="31dp"
+                        android:background="@drawable/corner"
+                        android:paddingLeft="15dp"
+                        android:text="Sign Out"
+                        android:textColor="#FA7508" />
+
+                    <FrameLayout
+                        android:layout_width="56dp"
+                        android:layout_height="32dp"
+                        android:layout_weight="1.09">
+
+                    </FrameLayout>
+
+                    <Button
+                        android:id="@+id/helpButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="31dp"
+                        android:background="@drawable/corner"
+                        android:paddingRight="15dp"
+                        android:text="Contact"
+                        android:textColor="#FA7508" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="174dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="15dp"
+                    android:background="@mipmap/mosnterlogo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="59dp"
+                    android:layout_weight="0.05"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <RelativeLayout
+                        android:id="@+id/accountBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:alpha="0.8"
+                        android:background="@drawable/orangeblock">
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="Update Contact Information"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="24sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_row="1"
+                        android:text="Mobile Number:" />
+
+                    <EditText
+                        android:id="@+id/mobileNumberText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_row="2"
+                        android:ems="10"
+                        android:inputType="phone" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_row="3"
+                        android:text="Address" />
+
+                    <EditText
+                        android:id="@+id/addressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_row="4"
+                        android:ems="10"
+                        android:inputType="textPostalAddress" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_row="5"
+                        android:text="Post Code" />
+
+                    <EditText
+                        android:id="@+id/postCodeText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_row="6"
+                        android:ems="10"
+                        android:inputType="textPostalAddress" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_row="7"
+                        android:text="City" />
+
+                    <EditText
+                        android:id="@+id/cityText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_row="8"
+                        android:ems="10"
+                        android:inputType="textPostalAddress" />
+                </GridLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/submitButton"
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/orangebutton"
+                        android:onClick="submitEvent"
+                        android:text="Submit" />
+
+                    <Button
+                        android:id="@+id/cancelButton"
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/orangebutton"
+                        android:onClick="cancelEvent"
+                        android:text="Cancel" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity_account_details"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/background"
+tools:context="rms.monsterbank.ChatActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <Button
+                            android:id="@+id/backButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="31dp"
+                            android:background="@drawable/corner"
+                            android:paddingLeft="15dp"
+                            android:text="Sign Out"
+                            android:textColor="#FA7508" />
+
+                        <FrameLayout
+                            android:layout_width="56dp"
+                            android:layout_height="32dp"
+                            android:layout_weight="1.09">
+
+                        </FrameLayout>
+
+                        <Button
+                            android:id="@+id/helpButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="31dp"
+                            android:background="@drawable/corner"
+                            android:paddingRight="15dp"
+                            android:text="Contact"
+                            android:textColor="#FA7508" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="174dp"
+                        android:layout_height="75dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="15dp"
+                        android:background="@mipmap/mosnterlogo" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.05"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <RelativeLayout
+                            android:id="@+id/accountBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="3dp"
+                            android:alpha="0.8"
+                            android:background="@drawable/orangeblock">
+
+                            <TextView
+                                android:id="@+id/textView8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:text="Help Desk"
+                                android:textColor="@android:color/background_light"
+                                android:textSize="24sp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/chatListView"
+                android:layout_width="match_parent"
+                android:layout_height="280dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:background="@android:color/darker_gray"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/msginput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:alpha="0.8"
+                    android:background="#d6d7d7" />
+
+                <Button
+                    android:id="@+id/sendMsg"
+                    android:layout_width="77dp"
+                    android:layout_height="match_parent"
+                    android:onClick="sendMessageEvent"
+                    android:text="SEND"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

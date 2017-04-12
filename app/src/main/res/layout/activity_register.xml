@@ -135,18 +135,18 @@
                             android:layout_height="wrap_content" />
 
                         <EditText
+                            android:id="@+id/emailField"
                             android:layout_width="254dp"
-                            android:ems="10"
-                            android:layout_marginTop="10dp"
-                            android:id="@+id/sortcodeField"
-                            android:hint="Email"
-                            android:alpha="0.5"
+                            android:layout_height="wrap_content"
                             android:layout_below="@+id/textView3"
                             android:layout_centerHorizontal="true"
-                            android:background="@drawable/rounded_corner"
-                            android:gravity="center_vertical|center"
+                            android:layout_marginTop="10dp"
                             android:layout_weight="0.18"
-                            android:layout_height="wrap_content" />
+                            android:alpha="0.5"
+                            android:background="@drawable/rounded_corner"
+                            android:ems="10"
+                            android:gravity="center_vertical|center"
+                            android:hint="Email" />
 
 
                     </LinearLayout>
@@ -161,21 +161,21 @@
                     android:gravity="center_horizontal">
 
                     <CheckBox
-                        android:text="Accept Terms and Conditions."
+                        android:id="@+id/checkTC"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/checkBox"
                         android:alpha="0.6"
+                        android:text="Accept Terms and Conditions."
                         android:textColor="@android:color/black" />
 
                     <Button
-                        android:text="SEND"
+                        android:id="@+id/sendButton"
                         android:layout_width="104dp"
                         android:layout_height="37dp"
-                        android:id="@+id/sendButton"
                         android:alpha="0.8"
                         android:background="@drawable/orangebutton"
-                        android:onClick="backLoginEvent"/>
+                        android:onClick="submitInfo"
+                        android:text="SEND" />
 
                 </LinearLayout>
 

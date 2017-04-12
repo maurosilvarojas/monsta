@@ -38,7 +38,8 @@
                         android:id="@+id/backButton"
                         android:textColor="#FA7508"
                         android:background="@drawable/corner"
-                        android:paddingLeft="15dp" />
+                        android:paddingLeft="15dp"
+                        android:onClick="backLoginEvent"/>
 
                     <FrameLayout
                         android:layout_width="56dp"
@@ -82,24 +83,24 @@
                             android:text="Account No:"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="19dp"
+                            android:layout_marginStart="12dp"
                             android:id="@+id/textView8"
                             android:textSize="24sp"
                             android:textColor="@android:color/background_light"
-                            android:layout_alignBaseline="@+id/textView9"
-                            android:layout_alignBottom="@+id/textView9"
+                            android:layout_alignBaseline="@+id/accNumberLabel"
+                            android:layout_alignBottom="@+id/accNumberLabel"
                             android:layout_alignParentStart="true" />
 
                         <TextView
                             android:text="16442932"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView9"
-                            android:layout_marginStart="58dp"
+                            android:id="@+id/accNumberLabel"
                             android:textSize="24sp"
                             android:textColor="@android:color/background_light"
                             android:layout_centerVertical="true"
-                            android:layout_toEndOf="@+id/textView8" />
+                            android:layout_toEndOf="@+id/textView8"
+                            android:layout_marginStart="10dp" />
 
                     </RelativeLayout>
 
@@ -136,7 +137,7 @@
                             android:text="2680.55"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/textView11"
+                            android:id="@+id/balanceLabel"
                             android:textSize="20sp"
                             android:layout_marginStart="27dp"
                             android:textColor="@android:color/holo_orange_dark"
@@ -185,18 +186,19 @@
                         android:background="@drawable/orangeblock"
                         android:alpha="0.8"
                         android:id="@+id/montleyInvoiceBar"
-                        android:layout_marginBottom="15dp">
+                        android:layout_marginBottom="15dp"
+                        android:onClick="startPaymentsActivity">
 
                         <TextView
-                            android:text="Transfer and Payments"
+                            android:id="@+id/montlyTitle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:id="@+id/montlyTitle"
-                            android:textSize="24sp"
-                            android:textColor="@android:color/background_light"
+                            android:layout_alignParentStart="true"
                             android:layout_centerVertical="true"
-                            android:layout_alignParentStart="true" />
+                            android:layout_marginStart="20dp"
+                            android:text="Deposit"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="24sp" />
 
                         <TextView
                             android:text="..."
@@ -213,35 +215,36 @@
                     </RelativeLayout>
 
                     <RelativeLayout
+                        android:id="@+id/contactBar"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:background="@drawable/orangeblock"
+                        android:layout_marginBottom="15dp"
                         android:alpha="0.8"
-                        android:id="@+id/contactBar"
-                        android:layout_marginBottom="15dp">
+                        android:background="@drawable/orangeblock"
+                        android:onClick="startAllInOutActivity">
 
                         <TextView
-                            android:text="Montly Invoice"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
                             android:id="@+id/contact"
-                            android:textSize="24sp"
-                            android:textColor="@android:color/background_light"
-                            android:layout_centerVertical="true"
-                            android:layout_alignParentStart="true" />
-
-                        <TextView
-                            android:text="..."
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/contactMenu"
-                            android:textSize="24sp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:text="Montly Invoice"
                             android:textColor="@android:color/background_light"
-                            android:layout_marginEnd="13dp"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/contactMenu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_alignBaseline="@+id/montlyTitle"
                             android:layout_alignBottom="@+id/montlyTitle"
-                            android:layout_alignParentEnd="true" />
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="13dp"
+                            android:text="..."
+                            android:textColor="@android:color/background_light"
+                            android:textSize="24sp" />
 
                     </RelativeLayout>
 
@@ -251,7 +254,8 @@
                         android:background="@drawable/orangeblock"
                         android:alpha="0.8"
                         android:id="@+id/branmchFinderBar"
-                        android:layout_marginBottom="15dp">
+                        android:layout_marginBottom="15dp"
+                        android:onClick="startBrachFinder">
 
                         <TextView
                             android:text="Find nearest Branch"
@@ -275,6 +279,40 @@
                             android:layout_alignBaseline="@+id/finder"
                             android:layout_alignBottom="@+id/finder"
                             android:layout_alignParentEnd="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/chatBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="15dp"
+                        android:alpha="0.8"
+                        android:background="@drawable/orangeblock"
+                        android:onClick="startChatSupport">
+
+                        <TextView
+                            android:id="@+id/chatTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:text="Contact Support"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/chatMenu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/chatTextView"
+                            android:layout_alignBottom="@+id/chatTextView"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="13dp"
+                            android:text="..."
+                            android:textColor="@android:color/background_light"
+                            android:textSize="24sp" />
 
                     </RelativeLayout>
 

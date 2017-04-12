@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity_account_details"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="rms.monsterbank.AccountDetails">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:gravity="center">
+
+                <Button
+                    android:text="Sign Out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:id="@+id/backButton"
+                    android:textColor="#FA7508"
+                    android:background="@drawable/corner"
+                    android:paddingLeft="15dp" />
+
+                <FrameLayout
+                    android:layout_width="56dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1.09">
+
+                </FrameLayout>
+
+                <Button
+                    android:text="Contact"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/helpButton"
+                    android:layout_height="31dp"
+                    android:background="@drawable/corner"
+                    android:textColor="#FA7508"
+                    android:paddingRight="15dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="174dp"
+                android:layout_height="75dp"
+                android:id="@+id/imageView"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:background="@mipmap/mosnterlogo" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="392dp">
+
+                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/map"
+                    tools:context=".BranchFinder"
+                    android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
